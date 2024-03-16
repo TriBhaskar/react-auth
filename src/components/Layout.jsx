@@ -1,5 +1,6 @@
 import sprinklebgImg from "../assets/Sprinkle.svg";
 import lanternImg from "../assets/day21-Lantern.png";
+import Register from "./Register";
 export default function Layout() {
   return (
     <section
@@ -7,62 +8,7 @@ export default function Layout() {
       style={{ backgroundImage: `url(${sprinklebgImg})` }}
     >
       <div className="flex flex-row bg-slate-50 h-3/4 w-3/4 mx-auto my-auto rounded-3xl">
-        <div className="basis-2/5 p-10">
-          <h1 className="text-justify text-2xl font-bold">Login</h1>
-          <hr className="mt-2 border-solid border-2 border-slate-200 rounded-lg" />
-          <form className="mt-4">
-            <h2 className="text-justify text-xl font-bold">
-              Welcome to Enjooya
-            </h2>
-            <h3 className="text-justify text-xl font-bold">
-              Create an account
-            </h3>
-            <div className="my-8 text-custom-color-1 font-semibold">
-              <div className="flex flex-col mt-4">
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="Full Name"
-                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-                />
-              </div>
-              <div className="flex flex-col mt-4">
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  placeholder="Email Address"
-                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-                />
-              </div>
-              <div className="flex flex-col mt-4">
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-                />
-              </div>
-              <div className="flex flex-col mt-4">
-                <input
-                  type="confirm passowrd"
-                  id="cpassword"
-                  name="cpassword"
-                  placeholder="Confirm Password"
-                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-                />
-              </div>
-            </div>
-            <button
-              type="submit"
-              className="w-full p-4 bg-custom-color-5 text-white rounded-xl hover:bg-gray-800 focus:outline-none focus:bg-black focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
-            >
-              Sign Up
-            </button>
-          </form>
-        </div>
+        <Register />
         <div
           className="basis-3/5 bg-cover bg-center bg-no-repeat rounded-r-3xl"
           style={{ backgroundImage: `url(${lanternImg})` }}
