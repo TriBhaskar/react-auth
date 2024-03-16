@@ -17,44 +17,49 @@ export default function Layout() {
             <h3 className="text-justify text-xl font-bold">
               Create an account
             </h3>
-            <div className="flex flex-col mt-4">
-              <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Full Name"
-                className="mt-1 p-2 w-full rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-"
-              />
+            <div className="my-8 text-custom-color-1 font-semibold">
+              <div className="flex flex-col mt-4">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Full Name"
+                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
+                />
+              </div>
+              <div className="flex flex-col mt-4">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email Address"
+                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
+                />
+              </div>
+              <div className="flex flex-col mt-4">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
+                />
+              </div>
+              <div className="flex flex-col mt-4">
+                <input
+                  type="confirm passowrd"
+                  id="cpassword"
+                  name="cpassword"
+                  placeholder="Confirm Password"
+                  className="mt-1 p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
+                />
+              </div>
             </div>
-            <div className="flex flex-col mt-4">
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Email Address"
-                className="mt-1 p-2 w-full rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-"
-              />
-            </div>
-            <div className="flex flex-col mt-4">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-                className="mt-1 p-2 w-full rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-"
-              />
-            </div>
-            <div className="flex flex-col mt-4">
-              <input
-                type="confirm passowrd"
-                id="cpassword"
-                name="cpassword"
-                placeholder="Confirm Password"
-                className="mt-1 p-2 w-full rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-              />
-            </div>
-            <button className="mt-4 bg-slate-200 text-white rounded-lg py-2">
-              Login
+            <button
+              type="submit"
+              className="w-full p-4 bg-custom-color-5 text-white rounded-xl hover:bg-gray-800 focus:outline-none focus:bg-black focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
+            >
+              Sign Up
             </button>
           </form>
         </div>

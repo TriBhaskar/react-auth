@@ -21,7 +21,7 @@ export default {
         "custom-color-7": "#FFB32B",
         "custom-color-8": "#F5C63C",
         "custom-color-9": "#637296",
-        "custom-color-10": "#f7f1e5",
+        "custom-color-10": "#6f889c",
         "custom-color-11": "#eef6fc",
       },
       keyframes: {
