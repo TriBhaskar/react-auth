@@ -1,13 +1,7 @@
 import { useInput } from "../hooks/useInput";
-import {
-  isEmail,
-  isEqualsToOtherValue,
-  isNameValid,
-  isNotEmpty,
-  isPasswordValid,
-} from "../util/validation";
+import { isEmail, isNotEmpty, isPasswordValid } from "../util/validation";
 
-export default function Register() {
+export default function Login() {
   //validation stuff
   const {
     value: emailValue,
@@ -23,48 +17,16 @@ export default function Register() {
     hasError: passwordHasError,
   } = useInput("", (value) => isPasswordValid(value) && isNotEmpty(value));
 
-  const {
-    value: nameValue,
-    handleInputChange: handleNameChange,
-    handleInputBlur: handleNameBlur,
-    hasError: nameHasError,
-  } = useInput("", (value) => isNameValid(value) && isNotEmpty(value));
-
-  const {
-    value: cpasswordValue,
-    handleInputChange: handleCPasswordChange,
-    handleInputBlur: handleCPasswordBlur,
-    hasError: cpasswordHasError,
-  } = useInput(
-    "",
-    (value) => isEqualsToOtherValue(value, passwordValue) && isNotEmpty(value)
-  );
-
   return (
     <div className="basis-2/5 p-10 font-semibold">
-      <h1 className="text-justify text-2xl font-bold">Register</h1>
+      <h1 className="text-justify text-2xl font-bold">Login</h1>
       <hr className="mt-2 border-solid border-2 border-slate-200 rounded-lg" />
       <form className="mt-4">
         <h2 className="text-justify text-xl font-bold">Welcome to Enjooya</h2>
-        <h3 className="text-justify text-xl font-bold">Create an account</h3>
+        <h3 className="text-justify text-xl font-bold">
+          Login to your account
+        </h3>
         <div className="my-8 text-custom-color-1 ">
-          <div className="flex flex-col mt-4">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Full Name"
-              onBlur={handleNameBlur}
-              onChange={handleNameChange}
-              value={nameValue}
-              className="p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-            />
-            {nameHasError && (
-              <p className="text-orange-500 text-base">
-                {nameHasError && "Please enter a valid name."}
-              </p>
-            )}
-          </div>
           <div className="flex flex-col mt-4">
             <input
               type="text"
@@ -99,36 +61,19 @@ export default function Register() {
               </p>
             )}
           </div>
-          <div className="flex flex-col mt-4">
-            <input
-              type="password"
-              id="cpassword"
-              name="cpassword"
-              placeholder="Confirm Password"
-              onBlur={handleCPasswordBlur}
-              onChange={handleCPasswordChange}
-              value={cpasswordValue}
-              className="p-4 w-full rounded-xl placeholder:text-custom-color-9 focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300 bg-custom-color-11"
-            />
-            {cpasswordHasError && (
-              <p className="text-orange-500 text-base">
-                {cpasswordHasError && "Passwords do not match."}
-              </p>
-            )}
-          </div>
         </div>
         <button
           type="submit"
           className="w-full p-4 bg-custom-color-5 text-white rounded-xl hover:bg-gray-800 focus:outline-none focus:bg-black focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
         >
-          Sign Up
+          Login
         </button>
       </form>
       <p>By signing up, you accept our </p>
       <p>Terms of Use and Privacy Policy</p>
       <hr className="my-4 border-solid border-2 border-slate-200 rounded-lg" />
       <p>
-        Already have an account? <a className="text-custom-color-5">Login</a>
+        Dont have an account? <a className="text-custom-color-5">Signup</a>
       </p>
     </div>
   );
