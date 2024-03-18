@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import sprinklebgImg from "../assets/Sprinkle.svg";
 import lanternImg from "../assets/day21-Lantern.png";
 import Login from "./Login";
@@ -10,7 +11,7 @@ export default function Layout() {
     >
       <div className="flex flex-row bg-slate-50 h-5/6 w-3/4 mx-auto my-auto rounded-3xl">
         {/* <Register /> */}
-        <Login />
+        <Outlet />
         <div
           className="basis-3/5 bg-cover bg-center bg-no-repeat rounded-r-3xl"
           style={{ backgroundImage: `url(${lanternImg})` }}
