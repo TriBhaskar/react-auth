@@ -40,11 +40,18 @@ export default function Register() {
     (value) => isEqualsToOtherValue(value, passwordValue) && isNotEmpty(value)
   );
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (emailHasError || passwordHasError) {
+      return;
+    }
+    console.log(emailValue, passwordValue);
+  }
   return (
     <div className="basis-2/5 p-10 font-semibold">
       <h1 className="text-justify text-2xl font-bold">Register</h1>
       <hr className="mt-2 border-solid border-2 border-slate-200 rounded-lg" />
-      <form className="mt-4">
+      <form className="mt-4" onSubmit={handleSubmit}>
         <h2 className="text-justify text-xl font-bold">Welcome to Enjooya</h2>
         <h3 className="text-justify text-xl font-bold">Create an account</h3>
         <div className="my-8 text-custom-color-1 ">

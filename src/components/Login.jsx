@@ -17,11 +17,19 @@ export default function Login() {
     hasError: passwordHasError,
   } = useInput("", (value) => isPasswordValid(value) && isNotEmpty(value));
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (emailHasError || passwordHasError) {
+      return;
+    }
+    console.log(emailValue, passwordValue);
+  }
+
   return (
     <div className="basis-2/5 p-10 font-semibold">
       <h1 className="text-justify text-2xl font-bold">Login</h1>
       <hr className="mt-2 border-solid border-2 border-slate-200 rounded-lg" />
-      <form className="mt-4">
+      <form className="mt-4" onSubmit={handleSubmit}>
         <h2 className="text-justify text-xl font-bold">Welcome to Enjooya</h2>
         <h3 className="text-justify text-xl font-bold">
           Login to your account
