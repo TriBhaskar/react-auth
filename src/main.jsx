@@ -12,6 +12,7 @@ import Home from "./components/Home.jsx";
 import Register from "./components/Register.jsx";
 import Login from "./components/Login.jsx";
 import Layout from "./components/Layout.jsx";
+import VerifyEmail from "./components/VerifyEmail.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Layout />} />
       <Route path="register" element={<Register />} />
       <Route path="login" element={<Login />} />
+      <Route path="otp" element={<VerifyEmail />} />
     </Route>
   )
 );
