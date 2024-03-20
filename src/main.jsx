@@ -13,6 +13,7 @@ import Login from "./components/Login.jsx";
 import Layout from "./components/Layout.jsx";
 import VerifyEmail from "./components/VerifyEmail.jsx";
 import ForgotPassword from "./components/ForgotPassword.jsx";
+import ChangePassword from "./components/ChangePassword.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="otp" element={<VerifyEmail />} />
       <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="change-password" element={<ChangePassword />} />
+      <Route path="*" element={<h1>404 Not Found</h1>} />
     </Route>
   )
 );
