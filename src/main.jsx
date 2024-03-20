@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import {
   Route,
@@ -13,6 +12,7 @@ import Register from "./components/Register.jsx";
 import Login from "./components/Login.jsx";
 import Layout from "./components/Layout.jsx";
 import VerifyEmail from "./components/VerifyEmail.jsx";
+import ForgotPassword from "./components/ForgotPassword.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="register" element={<Register />} />
       <Route path="login" element={<Login />} />
       <Route path="otp" element={<VerifyEmail />} />
+      <Route path="forgot-password" element={<ForgotPassword />} />
     </Route>
   )
 );

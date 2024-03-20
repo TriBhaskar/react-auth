@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useInput } from "../hooks/useInput";
 import { isEmail, isNotEmpty, isPasswordValid } from "../util/validation";
 
@@ -69,6 +70,9 @@ export default function Login() {
               </p>
             )}
           </div>
+          <Link className="text-left" to="/forgot-password">
+            Forgot password?
+          </Link>
         </div>
         <button
           type="submit"
@@ -81,7 +85,10 @@ export default function Login() {
       <p>Terms of Use and Privacy Policy</p>
       <hr className="my-4 border-solid border-2 border-slate-200 rounded-lg" />
       <p>
-        Dont have an account? <a className="text-custom-color-5">Signup</a>
+        Dont have an account?{" "}
+        <Link className="text-custom-color-5" to="/register">
+          Signup
+        </Link>
       </p>
     </div>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useInput } from "../hooks/useInput";
 import {
   isEmail,
@@ -134,7 +135,10 @@ export default function Register() {
       <p>Terms of Use and Privacy Policy</p>
       <hr className="my-4 border-solid border-2 border-slate-200 rounded-lg" />
       <p>
-        Already have an account? <a className="text-custom-color-5">Login</a>
+        Already have an account?{" "}
+        <Link className="text-custom-color-5" to="/login">
+          Login
+        </Link>
       </p>
     </div>
   );
